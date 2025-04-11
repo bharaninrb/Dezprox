@@ -143,49 +143,51 @@ const Whychooseus: React.FC = () => {
     description: string;
   }
 
-  const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
-    return (
-      <div className="flex flex-col items-center bg-white shadow-[0px_-1px_0.5px_0px_rgba(0,0,0,0.04)_inset,0px_8px_8px_-4px_rgba(0,0,0,0.02),0px_4px_4px_-2px_rgba(0,0,0,0.03),0px_3px_3px_-1.5px_rgba(27,27,27,0.03),0px_2px_2px_-1px_rgba(0,0,0,0.04),0px_0.5px_1px_0px_rgba(0,0,0,0.06),0px_0px_0px_1px_rgba(0,0,0,0.04)] px-5 py-[23px] rounded-3xl">
-        <div className="flex justify-center items-center w-12 h-12 bg-black shadow-[0px_32px_32px_-12px_rgba(27,27,27,0.12),0px_16px_16px_-8px_rgba(27,27,27,0.12),0px_8px_8px_-2px_rgba(27,27,27,0.12),0px_4px_4px_-2px_rgba(27,27,27,0.12),0px_3px_3px_-1.5px_rgba(27,27,27,0.12),0px_2px_2px_-1px_rgba(27,27,27,0.12),0px_1px_1px_-0.5px_rgba(27,27,27,0.12),0px_1px_2px_0px_rgba(255,255,255,0.04)_inset,0px_0.5px_0.5px_0px_rgba(255,255,255,0.10)_inset] mb-6 rounded-[40px]">
-          <div dangerouslySetInnerHTML={{ __html: icon }} />
-        </div>
-        <div className="text-xl text-center">
-          <span className="text-[#0D0C10] font-semibold">{title}</span>
-          <span className="text-[#646868]">{description}</span>
+// FeatureCard component with improved responsiveness
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) => {
+  return (
+    <div className="flex flex-col items-center bg-white shadow-[0px_-1px_0.5px_0px_rgba(0,0,0,0.04)_inset,0px_8px_8px_-4px_rgba(0,0,0,0.02),0px_4px_4px_-2px_rgba(0,0,0,0.03),0px_3px_3px_-1.5px_rgba(27,27,27,0.03),0px_2px_2px_-1px_rgba(0,0,0,0.04),0px_0.5px_1px_0px_rgba(0,0,0,0.06),0px_0px_0px_1px_rgba(0,0,0,0.04)] px-4 py-4 md:px-5 md:py-[23px] rounded-3xl w-full max-w-[300px] mx-auto">
+      <div className="flex justify-center items-center w-10 h-10 md:w-12 md:h-12 bg-black shadow-[0px_32px_32px_-12px_rgba(27,27,27,0.12),0px_16px_16px_-8px_rgba(27,27,27,0.12),0px_8px_8px_-2px_rgba(27,27,27,0.12),0px_4px_4px_-2px_rgba(27,27,27,0.12),0px_3px_3px_-1.5px_rgba(27,27,27,0.12),0px_2px_2px_-1px_rgba(27,27,27,0.12),0px_1px_1px_-0.5px_rgba(27,27,27,0.12),0px_1px_2px_0px_rgba(255,255,255,0.04)_inset,0px_0.5px_0.5px_0px_rgba(255,255,255,0.10)_inset] mb-4 md:mb-6 rounded-[32px] md:rounded-[40px]">
+        <div dangerouslySetInnerHTML={{ __html: icon }} />
+      </div>
+      <div className="text-center">
+        <span className="text-lg md:text-xl text-[#0D0C10] font-semibold block mb-2 md:mb-3">{title}</span>
+        <span className="text-sm md:text-base text-[#646868]">{description}</span>
+      </div>
+    </div>
+  );
+};
+
+// Main component with improved responsiveness
+return (
+  <main className="min-h-screen bg-background">
+    <section className="flex flex-col items-center justify-center w-full bg-[#F6FFF7] px-4 md:px-10 py-12 md:py-20">
+      <div className="container max-w-6xl w-full">
+        <header className="flex flex-col items-center text-center mb-8 md:mb-14">
+          <Title text="Why Choose Us" />
+          <TextGenerateEffect 
+            words="Because we do it differently!" 
+            className="text-3xl md:text-5xl text-[#141515] font-semibold mb-3 md:mb-4"
+          />
+          <p className="text-base md:text-lg text-[#646868] w-full md:w-5/12">
+            We innovate with tech, offer all-in-one digital solutions, mentorship, scalability, and long-term support.
+          </p>
+        </header> 
+      
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full px-2 md:px-0">
+          {featureData.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
       </div>
-    );
-  };
-
-  return (
-    <main className="min-h-screen bg-background">
-      <section className="flex flex-col items-center justify-center w-full bg-[#F6FFF7] px-10 py-20 max-md:px-6 max-sm:px-4 max-sm:py-10">
-        <div className="container max-w-6xl w-full">
-          <header className="flex flex-col items-center text-center mb-14 max-md:mb-10 max-sm:mb-6">
-            <Title text="Why Choose Us" />
-            <TextGenerateEffect 
-              words="Because we do it differently!" 
-              className="text-5xl text-[#141515] font-semibold mb-4 max-md:text-4xl max-sm:text-3xl"
-            />
-            <p className="text-lg text-[#646868] w-5/12 max-md:text-base max-sm:text-sm">
-              We innovate with tech, offer all-in-one digital solutions, mentorship, scalability, and long-term support.
-            </p>
-          </header> 
-      
-          <div className="grid grid-cols-3 gap-6 w-full max-lg:grid-cols-2 max-sm:grid-cols-1">
-            {featureData.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
-  );
+    </section>
+  </main>
+);
 };
 
 export default Whychooseus;

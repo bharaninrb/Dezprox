@@ -9,7 +9,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-gray-200 py-4 px-4 sm:px-6 lg:px-8 relative">
+    <nav className="bg-white py-4 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-black font-semibold hover:text-green-700 text-sm lg:text-base">
