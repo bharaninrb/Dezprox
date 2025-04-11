@@ -4,7 +4,7 @@ import Contactherosection from './components/contactherosection'
 import Contactpage from './components/contactpage'
 import Footertop from '../home/components/Footertop'
 import { ArrowUp } from 'lucide-react';
-const page = () => {
+const Page = () => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -48,4 +48,4 @@ transition-opacity duration-300
     </div>
   )
 }
-export default page
+export default Page
