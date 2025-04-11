@@ -153,7 +153,7 @@ const Servicessection = () => {
               <h1 className='text-lg'>{service.description}</h1>
               <div className='w-9/12 min-h-20 rounded-2xl border-2 border-green-500 p-5 py-8 bg-white'>
                 <ul className='space-y-3'>
-                  {service.features.map((feature, index) => (
+                  {service.features.map((feature) => (
                     <li key={feature} className='flex items-center justify-start gap-3'>
                       <div className='w-4 h-4 rounded-full bg-green-500'></div>
                       <span className='text-sm text-gray-800 font-medium'>{feature}</span>
