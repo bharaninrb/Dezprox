@@ -88,8 +88,8 @@ const Navbar = () => {
               <Link href="/about" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>About Us</Link>
               <Link href="/services" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>Services</Link>
               {/* <Link href="/products" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>Products</Link> */}
-              <Link href="/Careers" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>Careers</Link>
-              <Link href="/Contact_Us" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>Contact Us</Link>
+              <Link href="/careers" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>Careers</Link>
+              <Link href="/contact_us" className="text-black font-semibold hover:text-green-700 w-full text-center py-2" onClick={() => setIsOpen(false)}>Contact Us</Link>
               <Button className="bg-blue-900 hover:bg-blue-800 text-white rounded-md px-6 py-2 flex items-center space-x-2">
                 <svg
                   width="17"
