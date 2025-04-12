@@ -521,13 +521,13 @@ const FavouriteTools = () => {
       
         <div className="w-full px-4 md:px-6 lg:px-8 h-full mx-auto flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
           <div className="w-full md:w-1/2  lg:min-h-[40rem] p-5 min-h-32 flex flex-col items-center justify-center">
-            <div className="space-y-3">
+            <div className="space-y-3 relative left-10" >
               <Title text="Integrations" />
               <TextGenerateEffect 
                 words="Powerful Tools for Digital Excellence" 
                 className="text-3xl md:text-4xl lg:text-5xl font-bold w-[25rem] md:w-[30rem] lg:w-[40rem] mt-4 mb-4"
               />
-              <p className="text-gray-600 text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-center">
+              <p className="text-gray-600 text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-start">
                 Enhance productivity, streamline processes, and keep
                 everything connected without disrupting.
               </p>
@@ -538,10 +538,10 @@ const FavouriteTools = () => {
           </div>
       
           <div className="w-full md:w-1/2 lg:min-h-[40rem] flex flex-col justify-center items-center md:items-end">
-            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden">
-              <div className="lg:w-5/12 w-80 flex left-0 right-0 mx-auto gap-2 md:gap-4 lg:gap-6">
+            <div className="relative w-full h-[300px] md:h-[400px] lg:h-[600px] overflow-hidden ">
+              <div className="w-5/12 flex left-0 right-0 mx-auto gap-2 md:gap-4 lg:gap-6">
                 {[0, 1, 2, 3].map((colIndex) => (
-                  <div key={colIndex} className="flex-1 overflow-hidden">
+                  <div key={colIndex} className="flex-1">
                     <div className={`flex flex-col gap-2 ${colIndex % 2 === 0 ? 'scroll-down' : 'scroll-up'}`}>
                       {rows.map((_, rowIndex) => {
                         const cardIndex = (rowIndex + colIndex * rows.length) % cards.length;
@@ -549,9 +549,9 @@ const FavouriteTools = () => {
                         return (
                           <div
                             key={`col-${colIndex}-row-${rowIndex}`}
-                            className="w-16 md:w-20 lg:w-24 rounded-xl p-3 md:p-4 lg:p-5 hover-card"
+                            className="w-16 md:w-20 lg:w-20 rounded-xl p-3 md:p-4  hover-card"
                           >
-                            <div className="p-1.5 md:p-2 lg:p-3 border border-gray-300 bg-white rounded-lg w-fit mb-1.5 md:mb-2 lg:mb-3">
+                            <div className="p-1.5 md:p-2 lg:p-3 border border-gray-300  rounded-lg mb-1.5 md:mb-2 lg:mb-3">
                               <Image
                                 src={card.icon}
                                 width={24}
