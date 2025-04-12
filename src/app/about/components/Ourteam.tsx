@@ -227,7 +227,7 @@ const OurTeam: React.FC = () => {
     },
     {
       id: 2,
-      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744419982/Mohan_Kumar_M_xnjxvh.jpg",
+      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744421479/MKM_ij2vkp.jpg",
       name: "Mohan Kumar",
     },
     {

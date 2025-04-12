@@ -89,8 +89,8 @@ const Productsection = () => {
                 </div>
 
                 <div className="col-span-1">
-                  <div className="bg-gray-200 h-full   flex items-center justify-center">
-                    <Image width={500} height={500} src="https://res.cloudinary.com/do7dw5dwq/image/upload/v1743619372/product_clg_uedmza.png" alt="" className="w-full h-full object-center " />
+                  <div className="bg-gray-200 h-full  w-full flex items-center justify-center">
+                    <Image width={500} height={500} src="https://res.cloudinary.com/do7dw5dwq/image/upload/v1743619372/product_clg_uedmza.png" alt="" className="w-full  h-full object-center hidden lg:block " />
                   </div>
                 </div>
               </div>
