@@ -167,12 +167,31 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Add form submission logic here
-    console.log(formData);
-  };
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
 
+    event.preventDefault();
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    formData.append("access_key", "701509da-ad7d-43d7-9c9e-6f849ee8ff6d");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+    });
+    const result = await response.json();
+    if (result.success) {
+        console.log(result);
+        alert("Message sent successfully!");
+       
+    }
+}
   return (
     <div className="container mx-auto px-4 py-16 max-w-6xl">
       <div className="text-center mb-12">
