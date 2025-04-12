@@ -22,7 +22,7 @@ export default function WhatWeDo() {
         {/* Web Development */}
         <div className="lg:col-span-2 lg:row-span-4 bg-[#2A2A2A] p-4 rounded-lg shadow-md relative h-[300px]">
           <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-semibold text-white">Web Development</h3>
+            <h3 className="text-lg font-semibold text-white">Graphic Design</h3>
             <p className="text-md text-[#8C8C8C]">Building responsive websites.</p>
           </div>
           <div className="absolute bottom-0 right-0">
@@ -44,7 +44,7 @@ export default function WhatWeDo() {
         {/* E-commerce */}
         <div className="lg:col-span-2 lg:row-span-4 lg:col-start-5 bg-[#2A2A2A] p-4 rounded-lg shadow-md relative lg:h-auto h-[300px] md:h-[300px]">
           <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-semibold text-white">E-commerce</h3>
+            <h3 className="text-lg font-semibold text-white">Web Development</h3>
             <p className="text-md text-[#8C8C8C]">Building scalable online stores.</p>
           </div>
           <div className="absolute bottom-0 right-0">
@@ -55,7 +55,7 @@ export default function WhatWeDo() {
         {/* SEO & Marketing */}
         <div className="lg:col-span-2 lg:row-span-3 lg:col-start-7 bg-[#2A2A2A] p-4 rounded-lg shadow-md relative lg:h-auto h-[300px] md:h-[280px]">
           <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-semibold text-white">SEO & Marketing</h3>
+            <h3 className="text-lg font-semibold text-white">App Development</h3>
             <p className="text-md text-[#8C8C8C]">Boosting online presence.</p>
           </div>
           <div className="absolute bottom-0 right-0">
@@ -66,7 +66,7 @@ export default function WhatWeDo() {
         {/* Branding */}
         <div className="lg:col-span-3 lg:row-span-3 lg:col-start-1 lg:row-start-5 bg-[#2A2A2A] p-4 rounded-lg shadow-md relative lg:h-auto h-[300px] md:h-[280px]">
           <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-semibold text-white">Branding</h3>
+            <h3 className="text-lg font-semibold text-white">Content Creation</h3>
             <p className="text-md text-[#8C8C8C]">Crafting unique identities.</p>
           </div>
           <div className="absolute bottom-0 right-0">
@@ -77,7 +77,7 @@ export default function WhatWeDo() {
         {/* Mobile Apps */}
         <div className="lg:col-span-3 lg:row-span-3 lg:col-start-4 lg:row-start-5 bg-[#2A2A2A] p-4 rounded-lg shadow-md relative lg:h-auto h-[300px] md:h-[280px]">
           <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-semibold text-white">Mobile Apps</h3>
+            <h3 className="text-lg font-semibold text-white">Digital Marketing</h3>
             <p className="text-md text-[#8C8C8C]">Building powerful apps.</p>
           </div>
           <div className="absolute bottom-0 right-0">
@@ -88,7 +88,7 @@ export default function WhatWeDo() {
         {/* Support */}
         <div className="lg:col-span-2 lg:row-span-4 lg:col-start-7 lg:row-start-4 bg-[#2A2A2A] p-4 rounded-lg shadow-md relative lg:h-auto h-[300px] md:h-[300px]">
           <div className="absolute top-4 left-4">
-            <h3 className="text-lg font-semibold text-white">Support</h3>
+            <h3 className="text-lg font-semibold text-white">Student Projects</h3>
             <p className="text-md text-[#8C8C8C]">Ensuring smooth performance.</p>
           </div>
           <div className="absolute bottom-0 right-0">
