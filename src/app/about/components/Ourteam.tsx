@@ -169,16 +169,12 @@ import Image from "next/image";
 interface TeamMember {
   id: number;
   imageUrl: string;
-  quote: string;
   name: string;
-  position: string;
 }
 
 interface TeamMemberCardProps {
   imageUrl: string;
-  quote: string;
   name: string;
-  position: string;
   isActive: boolean;
 }
 
@@ -187,9 +183,9 @@ interface CarouselButtonProps {
   onClick: () => void;
 }
 
-const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ imageUrl, quote, name, position, isActive }) => (
+const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ imageUrl, name, isActive }) => (
   <div
-    className={`w-[320px] h-[480px] shrink-0 relative rounded-2xl overflow-hidden bg-[linear-gradient(to_bottom,_#ffffff,_#b3b3b3)] text-white p-4 transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-100"
+    className={`w-[320px] h-[480px] shrink-0 relative rounded-2xl overflow-hidden bg-[linear-gradient(to_bottom,_#ffffff,_#b3b3b3)] text-white  transition-opacity duration-300 scrollbar-none team-member-card ${isActive ? "opacity-100" : "opacity-100"
       }`}
   >
     <Image
@@ -197,11 +193,11 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ imageUrl, quote, name, 
       height={500}
       src={imageUrl}
       alt={name}
-      className="w-full h-2/3 object-cover rounded-xl mb-4"
+      className="w-full h-[480px] object-cover rounded-xl"
     />
-    <blockquote className="italic text-sm mb-3 text-white">{quote}</blockquote>
-    <h3 className="font-semibold text-lg">{name}</h3>
-    {position && <p className="text-sm text-white">{position}</p>}
+    {/* <blockquote className="italic text-sm mb-3 text-white">{quote}</blockquote> */}
+    <h3 className="text-2xl relative -top-20 w-full h-20 bg-gradient-to-b from-black/10 pt-5 font-bold  via-black to-gray-900 ">{name}</h3>
+    {/* {position && <p className="text-sm text-white">{position}</p>} */}
   </div>
 );
 
@@ -226,53 +222,29 @@ const OurTeam: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      imageUrl: "/assets/Robot2.png",
-      quote: "The Meat Lover's Feast is everything a carnivore dreams of.",
-      name: "Mohan Kumar",
-      position: "Founder & CEO",
+      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744419982/Bharanidharan_N_R_qtxjny.jpg",
+      name: "Bharanidharan N R",
     },
     {
       id: 2,
-      imageUrl: "/team2.png",
-      quote: "Simplicity, when done right, is unforgettable.",
-      name: "Bharanidharan N R",
-      position: "Senior UI/UX Designer",
+      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744419982/Mohan_Kumar_M_xnjxvh.jpg",
+      name: "Mohan Kumar",
     },
     {
       id: 3,
-      imageUrl: "/team3.png",
-      quote: "This is a pizza that tells a story in every bite.",
-      name: "Agnel Joshua Raj",
-      position: "Senior Product Designer",
+      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744421114/Agnel_sjolku.jpg",
+      name: "Agnel David",
     },
     {
       id: 4,
-      imageUrl: "/team4.png",
-      quote: "BBQ Blaze redefines fast-casual flavors.",
-      name: "Emma Gallagher",
-      position: "Food Writer, London Eats",
+      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744419976/Dinesh_wztiy5.jpg",
+      name: "Dinesh Siva",
     },
     {
       id: 5,
-      imageUrl: "/team5.png",
-      quote: "Creative and bold — love in every slice!",
-      name: "Liam Robertson",
-      position: "Pizza Critic",
-    },
-    {
-      id: 6,
-      imageUrl: "/team6.png",
-      quote: "Passion shows in every slice.",
-      name: "Sophia Bennett",
-      position: "FoodSpot Reviewer",
-    },
-    {
-      id: 7,
-      imageUrl: "/team7.png",
-      quote: "Innovation meets taste — every time.",
-      name: "Noah Williams",
-      position: "Culinary Blogger",
-    },
+      imageUrl: "https://res.cloudinary.com/do7dw5dwq/image/upload/v1744419976/Elanchezhiyan_Mahendiran_x4bvu5.jpg",
+      name: "Elanchezhiyan Mahendiran",
+    }
   ];
 
 
@@ -302,7 +274,7 @@ const OurTeam: React.FC = () => {
   return (
     <section className="bg-gray-900 py-20 px-5 min-h-screen text-center">
       <div className="mb-12">
-        <TextGenerateEffect words="Meet Our Team" className="text-white text-4xl font-bold mb-4" />
+        <TextGenerateEffect words="Meet Our Founders" className="text-white text-4xl font-bold mb-4" />
         <p className="text-gray-300 max-w-xl mx-auto">
           Our team of innovators, designers, and strategists collaborate to craft digital experiences.
         </p>
@@ -317,9 +289,7 @@ const OurTeam: React.FC = () => {
             <TeamMemberCard
               key={member.id}
               imageUrl={member.imageUrl}
-              quote={member.quote}
               name={member.name}
-              position={member.position}
               isActive={index === activeIndex}
             />
           ))}
